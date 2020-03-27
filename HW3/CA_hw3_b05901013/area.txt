@@ -1,0 +1,28 @@
+****************************************
+Report : area
+Design : matvecmult
+Version: N-2017.09-SP2
+Date   : Wed Nov 27 14:38:00 2019
+****************************************
+
+Library(s) Used:
+
+    slow (File: /home/raid7_2/course/cvsd/CBDK_IC_Contest/CIC/SynopsysDC/db/slow.db)
+
+Number of ports:                         1922
+Number of nets:                          4297
+Number of cells:                         2160
+Number of combinational cells:           1650
+Number of sequential cells:               447
+Number of macros/black boxes:               0
+Number of buf/inv:                        217
+Number of references:                      85
+
+Combinational area:              24664.919977
+Buf/Inv area:                      904.714185
+Noncombinational area:           11420.107058
+Macro/Black Box area:                0.000000
+Net Interconnect area:          228247.840698
+
+Total cell area:                 36085.027035
+Total area:                     264332.867733

@@ -1,0 +1,80 @@
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -max_paths 1
+Design : matvecmult
+Version: N-2017.09-SP2
+Date   : Wed Nov 27 14:38:45 2019
+****************************************
+
+Operating Conditions: slow   Library: slow
+Wire Load Model Mode: top
+
+  Startpoint: vector_x[113]
+              (input port clocked by CLK)
+  Endpoint: vector_y_w_reg_15__7_
+            (rising edge-triggered flip-flop clocked by CLK)
+  Path Group: CLK
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  matvecmult         tsmc13_wl10           slow
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock CLK (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.50       0.50
+  input external delay                                    0.50       1.00 r
+  vector_x[113] (in)                                      0.02       1.02 r
+  mult_45_15/a[1] (matvecmult_DW_mult_uns_14)             0.00       1.02 r
+  mult_45_15/U68/Y (CLKINVX1)                             0.37       1.40 f
+  mult_45_15/U110/Y (NOR2X1)                              0.33       1.73 r
+  mult_45_15/U7/S (ADDHXL)                                0.46       2.19 r
+  mult_45_15/product_1_ (matvecmult_DW_mult_uns_14)       0.00       2.19 r
+  add_5_root_add_1_root_add_45_15/B[1] (matvecmult_DW01_add_12)
+                                                          0.00       2.19 r
+  add_5_root_add_1_root_add_45_15/U1_1/S (ADDFXL)         0.98       3.18 f
+  add_5_root_add_1_root_add_45_15/SUM[1] (matvecmult_DW01_add_12)
+                                                          0.00       3.18 f
+  add_1_root_add_1_root_add_45_15/B[1] (matvecmult_DW01_add_8)
+                                                          0.00       3.18 f
+  add_1_root_add_1_root_add_45_15/U1_1/S (ADDFXL)         0.82       3.99 r
+  add_1_root_add_1_root_add_45_15/SUM[1] (matvecmult_DW01_add_8)
+                                                          0.00       3.99 r
+  add_0_root_add_1_root_add_45_15/B[1] (matvecmult_DW01_add_7)
+                                                          0.00       3.99 r
+  add_0_root_add_1_root_add_45_15/U1_1/CO (ADDFXL)        0.86       4.85 r
+  add_0_root_add_1_root_add_45_15/U1_2/S (ADDFXL)         0.62       5.47 r
+  add_0_root_add_1_root_add_45_15/SUM[2] (matvecmult_DW01_add_7)
+                                                          0.00       5.47 r
+  add_0_root_add_45_15/B[2] (matvecmult_DW01_add_46)      0.00       5.47 r
+  add_0_root_add_45_15/U1_2/CO (ADDFXL)                   0.87       6.34 r
+  add_0_root_add_45_15/U1_3/S (ADDFX2)                    0.72       7.06 r
+  add_0_root_add_45_15/SUM[3] (matvecmult_DW01_add_46)
+                                                          0.00       7.06 r
+  U231/Y (CLKBUFX3)                                       0.46       7.53 r
+  add_0_root_add_0_root_add_135_2/B_4_ (matvecmult_DW01_add_14)
+                                                          0.00       7.53 r
+  add_0_root_add_0_root_add_135_2/U1_4/CO (ADDFXL)        0.88       8.40 r
+  add_0_root_add_0_root_add_135_2/U1_5/CO (ADDFXL)        0.50       8.90 r
+  add_0_root_add_0_root_add_135_2/U1_6/CO (ADDFXL)        0.50       9.40 r
+  add_0_root_add_0_root_add_135_2/U1_7/Y (XOR3X1)         0.36       9.76 f
+  add_0_root_add_0_root_add_135_2/SUM[7] (matvecmult_DW01_add_14)
+                                                          0.00       9.76 f
+  U313/Y (AO22X1)                                         0.40      10.17 f
+  vector_y_w_reg_15__7_/D (DFFQXL)                        0.00      10.17 f
+  data arrival time                                                 10.17
+
+  clock CLK (rise edge)                                  10.00      10.00
+  clock network delay (ideal)                             0.50      10.50
+  clock uncertainty                                      -0.10      10.40
+  vector_y_w_reg_15__7_/CK (DFFQXL)                       0.00      10.40 r
+  library setup time                                     -0.22      10.18
+  data required time                                                10.18
+  --------------------------------------------------------------------------
+  data required time                                                10.18
+  data arrival time                                                -10.17
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.02
